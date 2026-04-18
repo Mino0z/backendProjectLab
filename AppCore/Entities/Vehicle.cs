@@ -2,10 +2,7 @@ namespace AppCore.Entities;
 
 public class Vehicle : EntityBase
 {
-	public required string LicensePlate { get; set; }
-	public required string Brand { get; set; }
-	public required string Color { get; set; }
-
-	public ICollection<ParkingSession> Sessions { get; set; } = new List<ParkingSession>();
+    public string LicensePlate { get; set; } = string.Empty;
+    public string Brand { get; set; } = string.Empty;
+    public string Color { get; set; } = string.Empty;
 }
-

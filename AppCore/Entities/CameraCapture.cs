@@ -4,15 +4,11 @@ namespace AppCore.Entities;
 
 public class CameraCapture : EntityBase
 {
-    public Guid ParkingGateId { get; set; }
-    public required ParkingGate Gate { get; set; }
-
-    public required string GateName { get; set; }
-    public required string LicensePlate { get; set; }
-    public required string DetectedBrand { get; set; }
-    public required string DetectedColor { get; set; }
+    public string GateName { get; set; } = string.Empty;
+    public string LicensePlate { get; set; } = string.Empty;
+    public string DetectedBrand { get; set; } = string.Empty;
+    public string DetectedColor { get; set; } = string.Empty;
     public DateTime CapturedAt { get; set; }
-    public required string ImagePath { get; set; }
+    public string ImagePath { get; set; } = string.Empty;
     public CaptureType Type { get; set; }
 }
-

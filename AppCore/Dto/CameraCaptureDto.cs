@@ -7,4 +7,3 @@ public record CameraCaptureDto(
     string GateName,
     string? ImagePath = null
 );
-

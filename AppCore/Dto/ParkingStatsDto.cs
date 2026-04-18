@@ -6,4 +6,3 @@ public record ParkingStatsDto(
     int TodayEntries,
     int TodayExits
 );
-

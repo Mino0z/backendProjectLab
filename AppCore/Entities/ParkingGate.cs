@@ -4,12 +4,17 @@ namespace AppCore.Entities;
 
 public class ParkingGate : EntityBase
 {
-    public required string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
     public GateType Type { get; set; }
-    public required string Location { get; set; }
+    public string Location { get; set; } = string.Empty;
     public bool IsOperational { get; set; }
 
-    public ICollection<ParkingSession> Sessions { get; set; } = new List<ParkingSession>();
-    public ICollection<CameraCapture> Captures { get; set; } = new List<CameraCapture>();
+    public static implicit operator AppCore.Dto.ParkingGateDto(ParkingGate entity) =>
+        new (
+            entity.Id,
+            entity.Name,
+            entity.Type.ToString(),
+            entity.Location,
+            entity.IsOperational
+        );
 }
-

@@ -6,4 +6,3 @@ public interface IVehicleRepository : IGenericRepositoryAsync<Vehicle>
 {
     Task<Vehicle?> FindByLicensePlateAsync(string licensePlate);
 }
-

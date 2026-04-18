@@ -9,3 +9,9 @@ public record ParkingTariffDto(
     bool IsActive
 );
 
+public record CreateTariffDto(
+    string Name,
+    int FreeMinutes,
+    decimal HourlyRate,
+    decimal DailyMaxRate
+);

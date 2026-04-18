@@ -5,4 +5,3 @@ public enum CaptureType
     Entry,
     Exit
 }
-

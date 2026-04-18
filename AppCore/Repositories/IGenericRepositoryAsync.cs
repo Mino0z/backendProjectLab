@@ -1,4 +1,5 @@
 using AppCore.Entities;
+using AppCore.Dto;
 
 namespace AppCore.Repositories;
 
@@ -11,4 +12,3 @@ public interface IGenericRepositoryAsync<T> where T : EntityBase
     Task<T> UpdateAsync(T entity);
     Task RemoveByIdAsync(Guid id);
 }
-

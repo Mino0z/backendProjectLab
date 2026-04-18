@@ -6,4 +6,3 @@ public enum GateType
     Exit,
     Both
 }
-

@@ -6,4 +6,3 @@ public record VehicleDto(
     string Brand,
     string Color
 );
-

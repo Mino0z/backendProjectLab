@@ -1,4 +1,4 @@
-namespace AppCore.Repositories;
+namespace AppCore.Dto;
 
 public record PagedResult<T>(
     List<T> Items,
@@ -7,8 +7,7 @@ public record PagedResult<T>(
     int PageSize
 )
 {
-    public int TotalPages => (int)Math.Ceiling((double)TotalCount / PageSize);
+    public int TotalPages => (int)Math.Ceiling((double)TotalCount / (PageSize > 0 ? PageSize : 1));
     public bool HasNext => Page < TotalPages;
     public bool HasPrevious => Page > 1;
 }
-
